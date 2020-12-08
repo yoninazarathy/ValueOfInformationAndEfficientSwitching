@@ -1,7 +1,7 @@
 using Distributions, Random
 
 #Simulates with the cool off policy
-function simCoolOff(N,σ,γ,c,tMax, seed = 1974)
+function simCoolOff(N,σ,γ,c,tMax; seed = 1974)
     Random.seed!(seed)
     state = [0 for _ in 1:N] #actual state of arms
     allowedToSwitchTo = [true for _ in 1:N] #state of belief state of arms (true => passed the threshold)

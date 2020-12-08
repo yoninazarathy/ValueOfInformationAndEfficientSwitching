@@ -1,7 +1,7 @@
 using Distributions, Random
 
 #Simulates with the call gapping policy
-function simCallGapping(N,τ,γ,c,tMax, seed = 1974)
+function simCallGapping(N,τ,γ,c,tMax; seed = 1974)
     Random.seed!(seed)
     state = [0 for _ in 1:N]
     currentArm = 1
